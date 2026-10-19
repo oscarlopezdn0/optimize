@@ -148,18 +148,21 @@ details.src a{color:var(--gold-text);text-underline-offset:3px}
 .steps p{color:var(--on-dark-mute);font-size:17px;max-width:34ch}
 @media (max-width:760px){.steps{grid-template-columns:minmax(0,1fr)}.steps li{grid-template-columns:48px minmax(0,1fr);column-gap:18px;align-items:start}.steps .n{grid-row:span 2}}
 
-/* Validación */
-.val{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:start}
-@media (max-width:920px){.val{grid-template-columns:minmax(0,1fr)}}
-.val ul{list-style:none;margin:0;padding:0}
-.val li{padding:22px 0;border-top:1px solid var(--line-cream);font-size:clamp(17px,1.9vw,20px)}
-.val li:last-child{border-bottom:1px solid var(--line-cream)}
-.val li b{font-family:var(--f-display);font-weight:600}
-.pilot{background:var(--ink);color:var(--on-dark);border-radius:6px;padding:clamp(26px,4vw,40px);display:grid;gap:18px;background-image:radial-gradient(rgba(242,184,75,.2) 1.3px,transparent 1.5px);background-size:20px 20px}
-.pilot h3{font-size:clamp(22px,3vw,28px);font-weight:700}
-.pilot p{color:var(--on-dark-mute)}
-.pilot .btn{justify-self:start}
 
+/* Comunidad */
+.perks{list-style:none;margin:0 0 clamp(36px,5vw,60px);padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--on-cream)}
+.perks li{padding:24px clamp(14px,2.4vw,32px) 8px 0;font-size:clamp(17px,1.7vw,19px);line-height:1.5;color:var(--on-cream-mute)}
+.perks li+li{padding-left:clamp(14px,2.4vw,32px);border-left:1px solid var(--line-cream)}
+.perks b{display:block;margin-bottom:6px;font-family:var(--f-display);font-weight:600;font-size:clamp(18px,2vw,21px);line-height:1.25;color:var(--on-cream)}
+@media (max-width:760px){.perks{grid-template-columns:minmax(0,1fr)}.perks li{padding:20px 0}.perks li+li{padding-left:0;border-left:0;border-top:1px solid var(--line-cream)}}
+.invest{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,48px);background:var(--ink);color:var(--on-dark);border-radius:6px;padding:clamp(28px,5vw,56px);background-image:radial-gradient(rgba(242,184,75,.2) 1.3px,transparent 1.5px);background-size:20px 20px}
+.invest .mark{width:clamp(84px,12vw,140px)}
+.invest h3{font-size:clamp(28px,4.6vw,48px);font-weight:800;letter-spacing:-.01em;max-width:18ch}
+.inv-sub{margin-top:10px;font-family:var(--f-display);font-weight:500;font-size:clamp(18px,2.2vw,24px);color:var(--gold-hi)}
+.inv-points{list-style:none;margin:clamp(20px,3vw,30px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px clamp(20px,3vw,40px)}
+.inv-points li{display:flex;align-items:center;gap:10px;font-size:clamp(16px,1.7vw,19px);font-weight:600}
+.inv-points li::before{content:"";flex:none;width:10px;height:10px;background:var(--gold-hi);border-radius:2px}
+@media (max-width:640px){.invest{grid-template-columns:minmax(0,1fr);gap:18px}.inv-points{flex-direction:column}}
 /* Contacto */
 .contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
 @media (max-width:900px){.contact{grid-template-columns:minmax(0,1fr)}}
@@ -186,6 +189,7 @@ footer{background:#1F1510;color:var(--on-dark-mute);padding-block:36px;font-size
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
 footer .brand{font-size:18px;color:var(--on-dark)}
 footer .mark{width:32px;--m-spr:#1F1510}
+
 </style>
 </head>
 <body>
@@ -209,7 +213,7 @@ footer .mark{width:32px;--m-spr:#1F1510}
       <a href="#solucion">Solución</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#como-funciona">Cómo funciona</a>
-      <a href="#validacion">Validación</a>
+      <a href="#comunidad">Comunidad</a>
       <a class="btn small" href="#contacto">Hablar con un asesor</a>
     </nav>
   </div>
@@ -408,21 +412,28 @@ footer .mark{width:32px;--m-spr:#1F1510}
   </div>
 </section>
 
-<section id="validacion" class="band cream">
+<section id="comunidad" class="band cream">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Validación del prototipo</p>
-      <h2>Construido junto a quienes trabajan la tierra</h2>
+      <p class="eyebrow">Comunidad OPTIMIZE</p>
+      <h2>Súmate a la familia OPTIMIZE</h2>
+      <p class="lead">Agricultores de la zona central que dejaron de decidir a ojo y empezaron a cuidar su suelo con datos.</p>
     </div>
-    <div class="val">
-      <ul>
-        <li><b>Entrevistas a agricultores</b> y observación en terreno en Llay-Llay.</li>
-        <li><b>Prototipos</b> de sensores, mezcladora y app, con un experimento de usabilidad diseñado: el agricultor debe entender una alerta en menos de 2 minutos y acertar la corrección en más del 80 % de los casos.</li>
-      </ul>
-      <div class="pilot">
-        <h3>Próximamente: pilotos en campos reales</h3>
-        <p>¿Quieres ser parte del primero?</p>
-        <a class="btn" href="#contacto">Hablar con un asesor</a>
+    <ul class="perks">
+      <li><b>Un asesor te acompaña</b> a definir las zonas de tu campo y por dónde conviene empezar.</li>
+      <li><b>Instalación y capacitación en terreno</b>, para que tú y tu equipo usen el sistema desde el primer día.</li>
+      <li><b>Crece a tu ritmo</b>: parte con un módulo y suma los demás sin cambiar de sistema.</li>
+    </ul>
+    <div class="invest">
+      <svg class="mark" viewBox="0 0 1000 969.9" role="img" aria-label="Logo de OPTIMIZE"><use href="#logo"/></svg>
+      <div class="inv-text">
+        <h3>Optimiza tu campo y tu bolsillo</h3>
+        <p class="inv-sub">La inversión que tu campo se merece.</p>
+        <ul class="inv-points">
+          <li>Menos agua perdida</li>
+          <li>Menos fertilizante desperdiciado</li>
+          <li>Un suelo que rinde más años</li>
+        </ul>
       </div>
     </div>
   </div>
